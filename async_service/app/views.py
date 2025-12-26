@@ -29,7 +29,7 @@ def result_callback(task, request_id):
                    'token': SERVICE_TOKEN}
         headers = {'X-Service-Token':SERVICE_TOKEN}
 
-        response = requests.put(CALLBACK_URL + str(request_id) + '/update-calculation',
+        response = requests.put(CALLBACK_URL + str(request_id) + '/update-total-power',
                                 json=payload, headers=headers, timeout=5)
     except futures._base.CancelledError:
         return
